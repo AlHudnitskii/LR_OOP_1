@@ -1,0 +1,35 @@
+# Visual Studio
+.vs/
+*.suo
+*.user
+*.userprefs
+*.sln.docstates
+
+# Build results
+[Dd]ebug/
+[Rr]elease/
+x64/
+x86/
+[Aa][Rr][Mm]/
+[Bb]in/
+[Oo]bj/
+
+# Packages
+*.nupkg
+packages/
+*.snupkg
+
+# Others
+*.log
+*.tlog
+*.vsix
+*.cache
+*.pdb
+*.mdb
+*.opendb
+*.ilk
+*.idb
+*.pdb
+
+# NuGet
+*.nuspec
