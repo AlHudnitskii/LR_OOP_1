@@ -7,6 +7,7 @@
 *.csproj
 *.sin
 *.sln
+OOP_LR1.sln
 
 # Build results
 [Dd]ebug/
