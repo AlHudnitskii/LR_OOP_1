@@ -1,39 +1,38 @@
-﻿
-using OOP_LR1.BankSystem.Application.Services;
-using OOP_LR1.BankSystem.ToConsole.Style;
+﻿    using OOP_LR1.BankSystem.Application.Services;
+    using OOP_LR1.BankSystem.ToConsole.Style;
 
-namespace OOP_LR1.BankSystem.ToConsole.Services
-{
-    public class UserManager
+    namespace OOP_LR1.BankSystem.ToConsole.Services
     {
-        private readonly UserService _userService;
-
-        public UserManager(UserService userService)
+        public class UserManager
         {
-            _userService = userService;
-        }
+            private readonly UserService _userService;
 
-        public void ShowAllUsers()
-        {
-            var users = _userService.GetAllUsers();
-
-            if (users.Count == 0)
+            public UserManager(UserService userService)
             {
-                Console.WriteLine("Пользователи не найдены.");
-                return;
+                _userService = userService;
             }
 
-            string[] headers = { "ID", "ФИО", "Email", "Телефон", "Роль" };
-            var rows = users.Select(u => new[]
+            public void ShowAllUsers()
             {
-                u.Id,
-                u.FullName,
-                u.Email,
-                u.PhoneNumber,
-                u.Role.ToString()
-            }).ToList();
+                var users = _userService.GetAllUsers();
 
-            TableDrawer.DrawTable(headers, rows);
+                if (users.Count == 0)
+                {
+                    Console.WriteLine("Пользователи не найдены.");
+                    return;
+                }
+
+                string[] headers = { "ID", "ФИО", "Email", "Телефон", "Роль" };
+                var rows = users.Select(u => new[]
+                {
+                    u.Id,
+                    u.FullName,
+                    u.Email,
+                    u.PhoneNumber,
+                    u.Role.ToString()
+                }).ToList();
+
+                TableDrawer.DrawTable(headers, rows);
+            }
         }
     }
-}

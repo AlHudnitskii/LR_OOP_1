@@ -2,10 +2,14 @@
 {
     public class Account
     {
-        public string AccountNumber { get; set; } = Guid.NewGuid().ToString();
-        public decimal Balance { get; set; }
+        public string Id { get; set; } = Guid.NewGuid().ToString();
+        public string AccountNumber { get; set; }
         public bool IsBlocked { get; set; } = false;
-        public bool IsFrozen { get; set; } = false;
-        public string UserId { get; set; }
+
+        public decimal Balance { get; set; }
+        public string OwnerId { get; set; } 
+        public User Owner { get; set; } 
+        public string BankId { get; set; }  
+        public Bank Bank { get; set; } 
     }
 }

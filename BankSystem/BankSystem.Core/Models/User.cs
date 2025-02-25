@@ -12,9 +12,10 @@ namespace OOP_LR1.BankSystem.Core.Models
         public string Citizenship { get; set; }
         public string CountryOfResidence { get; set; }
         public string PhoneNumber { get; set; }
-        public string Email {  get; set; }
+        public string Email { get; set; }
         public Role Role { get; set; }
+        public string BankId { get; set; } 
+        public Bank Bank { get; set; } 
         public List<Account> Accounts { get; set; } = new List<Account>();
-
     }
 }

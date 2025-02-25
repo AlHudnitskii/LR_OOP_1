@@ -1,35 +1,32 @@
-﻿using OOP_LR1.BankSystem.Core.Interfaces;
+﻿using Microsoft.Extensions.Logging;
+using OOP_LR1.BankSystem.Core.Interfaces;
 using OOP_LR1.BankSystem.Core.Models;
 using OOP_LR1.BankSystem.Infrastructure.Logging;
+using System.Threading.Tasks;
 
 namespace OOP_LR1.BankSystem.Application.Services
 {
     public class AuthService
     {
         private readonly IUserRepository _userRepository;
-        private readonly Logger _logger;
+        private readonly ILogger _logger;
 
-        public AuthService(IUserRepository userRepository, Logger logger)
+        public AuthService(IUserRepository userRepository, ILogger logger)
         {
             _userRepository = userRepository;
             _logger = logger;
         }
 
-        public void Register(User user)
+        public async Task Register(User user)
         {
-            if (_userRepository.GetAllUsers().Any(u => u.Email == user.Email))
-            {
-                throw new Exception("Пользователь с таким email уже существует.");
-            }
-
-            _userRepository.AddUser(user);
-            _logger.Log($"Зарегистрирован новый пользователь: {user.Email}.");
+            await _userRepository.AddUserAsync(user);
+            _logger.Log($"Пользователь {user.Email} зарегистрирован.");
         }
-        public User FindUserByEmailAndDocumentNumber(string email, string documentNumber)
+
+        public async Task<User> FindUserByEmailAndDocumentNumber(string email, string documentNumber)
         {
-            return _userRepository.GetAllUsers()
-                .FirstOrDefault(u => u.Email == email && u.DocumentNumber == documentNumber);
+            var users = await _userRepository.GetAllUsersAsync();
+            return users.FirstOrDefault(u => u.Email == email && u.DocumentNumber == documentNumber);
         }
     }
 }
-

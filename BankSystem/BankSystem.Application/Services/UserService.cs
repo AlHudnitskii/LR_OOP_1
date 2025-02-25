@@ -1,5 +1,7 @@
 ﻿using OOP_LR1.BankSystem.Core.Interfaces;
 using OOP_LR1.BankSystem.Core.Models;
+using System.Collections.Generic;
+using System.Threading.Tasks;
 
 namespace OOP_LR1.BankSystem.Application.Services
 {
@@ -12,19 +14,14 @@ namespace OOP_LR1.BankSystem.Application.Services
             _userRepository = userRepository;
         }
 
-        public void RegisterUser(User user)
+        public async Task<User> GetUserByIdAsync(string id)
         {
-            _userRepository.AddUser(user);
+            return await _userRepository.GetUserByIdAsync(id);
         }
 
-        public User GetUser(string userId)
+        public async Task<IEnumerable<User>> GetAllUsersAsync()
         {
-            return _userRepository.GetUserById(userId);
-        }
-
-        public List<User> GetAllUsers()
-        {
-            return _userRepository.GetAllUsers();
+            return await _userRepository.GetAllUsersAsync();
         }
     }
 }
