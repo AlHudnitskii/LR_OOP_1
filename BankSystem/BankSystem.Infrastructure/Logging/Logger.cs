@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace OOP_LR1.BankSystem.Infrastructure.Logging
+namespace OOP_LR1.BankSystem.Infrastructure.Logging 
 {
-    public class Logger
+    public class Logger : ILogger
     {
         private readonly string _logFilePath;
 

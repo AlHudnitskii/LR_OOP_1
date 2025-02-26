@@ -13,6 +13,10 @@ namespace OOP_LR1.BankSystem.Infrastructure
         public DbSet<Enterprise> Enterprises { get; set; }
         public DbSet<Transaction> Transactions { get; set; }
 
+        public BankDbContext() { }
+
+        public BankDbContext(DbContextOptions<BankDbContext> options) : base(options) { }
+
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             optionsBuilder.UseSqlite("Data Source=bank.db");

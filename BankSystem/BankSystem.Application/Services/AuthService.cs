@@ -1,5 +1,4 @@
-﻿using Microsoft.Extensions.Logging;
-using OOP_LR1.BankSystem.Core.Interfaces;
+﻿using OOP_LR1.BankSystem.Core.Interfaces;
 using OOP_LR1.BankSystem.Core.Models;
 using OOP_LR1.BankSystem.Infrastructure.Logging;
 using System.Threading.Tasks;

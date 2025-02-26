@@ -12,11 +12,11 @@
                 _userService = userService;
             }
 
-            public void ShowAllUsers()
+            public async void ShowAllUsers()
             {
-                var users = _userService.GetAllUsers();
+                var users = await _userService.GetAllUsersAsync();
 
-                if (users.Count == 0)
+                if (!users.Any())
                 {
                     Console.WriteLine("Пользователи не найдены.");
                     return;

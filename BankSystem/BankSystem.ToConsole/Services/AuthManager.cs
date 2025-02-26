@@ -184,10 +184,10 @@ namespace OOP_LR1.BankSystem.ToConsole.Services
             return user;
         }
 
-        public User FindUserByEmailAndDocumentNumber(string email, string documentNumber)
+        public async Task<User> FindUserByEmailAndDocumentNumber(string email, string documentNumber)
         {
-            return _userService.GetAllUsers()
-                .FirstOrDefault(u => u.Email == email && u.DocumentNumber == documentNumber);
+            var users = await _userService.GetAllUsersAsync();
+            return users.FirstOrDefault(u => u.Email == email && u.DocumentNumber == documentNumber);
         }
 
         public void LogoutUser()
