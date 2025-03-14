@@ -25,7 +25,7 @@
                 string[] headers = { "ID", "ФИО", "Email", "Телефон", "Роль" };
                 var rows = users.Select(u => new[]
                 {
-                    u.Id,
+                    u.Id.ToString(),
                     u.FullName,
                     u.Email,
                     u.PhoneNumber,

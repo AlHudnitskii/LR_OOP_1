@@ -2,6 +2,7 @@
 using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using OOP_LR1.BankSystem.Infrastructure;
 
@@ -10,9 +11,11 @@ using OOP_LR1.BankSystem.Infrastructure;
 namespace OOP_LR1.Migrations
 {
     [DbContext(typeof(BankDbContext))]
-    partial class BankDbContextModelSnapshot : ModelSnapshot
+    [Migration("20250314145302_AddIsFrozenToAccount")]
+    partial class AddIsFrozenToAccount
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder.HasAnnotation("ProductVersion", "9.0.2");
@@ -2581,9 +2584,6 @@ namespace OOP_LR1.Migrations
                         .IsRequired()
                         .HasColumnType("TEXT");
 
-                    b.Property<bool>("IsCancelled")
-                        .HasColumnType("INTEGER");
-
                     b.Property<string>("ToAccountId")
                         .IsRequired()
                         .HasColumnType("TEXT");
@@ -2626,9 +2626,6 @@ namespace OOP_LR1.Migrations
                         .IsRequired()
                         .HasColumnType("TEXT");
 
-                    b.Property<bool>("IsApproved")
-                        .HasColumnType("INTEGER");
-
                     b.Property<string>("PhoneNumber")
                         .IsRequired()
                         .HasColumnType("TEXT");
@@ -2653,7 +2650,6 @@ namespace OOP_LR1.Migrations
                             DocumentType = "Паспорт",
                             Email = "client1@example.com",
                             FullName = "Клиент 1",
-                            IsApproved = false,
                             PhoneNumber = "+375 29 1000020",
                             Role = 0
                         },
@@ -2667,7 +2663,6 @@ namespace OOP_LR1.Migrations
                             DocumentType = "Паспорт",
                             Email = "client2@example.com",
                             FullName = "Клиент 2",
-                            IsApproved = false,
                             PhoneNumber = "+375 29 1000040",
                             Role = 0
                         },
@@ -2681,7 +2676,6 @@ namespace OOP_LR1.Migrations
                             DocumentType = "Паспорт",
                             Email = "client3@example.com",
                             FullName = "Клиент 3",
-                            IsApproved = false,
                             PhoneNumber = "+375 29 1000060",
                             Role = 0
                         },
@@ -2695,7 +2689,6 @@ namespace OOP_LR1.Migrations
                             DocumentType = "Паспорт",
                             Email = "client4@example.com",
                             FullName = "Клиент 4",
-                            IsApproved = false,
                             PhoneNumber = "+375 29 1000080",
                             Role = 0
                         },
@@ -2709,7 +2702,6 @@ namespace OOP_LR1.Migrations
                             DocumentType = "Паспорт",
                             Email = "client5@example.com",
                             FullName = "Клиент 5",
-                            IsApproved = false,
                             PhoneNumber = "+375 29 1000100",
                             Role = 0
                         },
@@ -2723,7 +2715,6 @@ namespace OOP_LR1.Migrations
                             DocumentType = "Паспорт",
                             Email = "client6@example.com",
                             FullName = "Клиент 6",
-                            IsApproved = false,
                             PhoneNumber = "+375 29 1000120",
                             Role = 0
                         },
@@ -2737,7 +2728,6 @@ namespace OOP_LR1.Migrations
                             DocumentType = "Паспорт",
                             Email = "client7@example.com",
                             FullName = "Клиент 7",
-                            IsApproved = false,
                             PhoneNumber = "+375 29 1000140",
                             Role = 0
                         },
@@ -2751,7 +2741,6 @@ namespace OOP_LR1.Migrations
                             DocumentType = "Паспорт",
                             Email = "client8@example.com",
                             FullName = "Клиент 8",
-                            IsApproved = false,
                             PhoneNumber = "+375 29 1000160",
                             Role = 0
                         },
@@ -2765,7 +2754,6 @@ namespace OOP_LR1.Migrations
                             DocumentType = "Паспорт",
                             Email = "client9@example.com",
                             FullName = "Клиент 9",
-                            IsApproved = false,
                             PhoneNumber = "+375 29 1000180",
                             Role = 0
                         },
@@ -2779,7 +2767,6 @@ namespace OOP_LR1.Migrations
                             DocumentType = "Паспорт",
                             Email = "client10@example.com",
                             FullName = "Клиент 10",
-                            IsApproved = false,
                             PhoneNumber = "+375 29 1000200",
                             Role = 0
                         },
@@ -2793,7 +2780,6 @@ namespace OOP_LR1.Migrations
                             DocumentType = "Паспорт",
                             Email = "client11@example.com",
                             FullName = "Клиент 11",
-                            IsApproved = false,
                             PhoneNumber = "+375 29 1000220",
                             Role = 0
                         },
@@ -2807,7 +2793,6 @@ namespace OOP_LR1.Migrations
                             DocumentType = "Паспорт",
                             Email = "client12@example.com",
                             FullName = "Клиент 12",
-                            IsApproved = false,
                             PhoneNumber = "+375 29 1000240",
                             Role = 0
                         },
@@ -2821,7 +2806,6 @@ namespace OOP_LR1.Migrations
                             DocumentType = "Паспорт",
                             Email = "client13@example.com",
                             FullName = "Клиент 13",
-                            IsApproved = false,
                             PhoneNumber = "+375 29 1000260",
                             Role = 0
                         },
@@ -2835,7 +2819,6 @@ namespace OOP_LR1.Migrations
                             DocumentType = "Паспорт",
                             Email = "client14@example.com",
                             FullName = "Клиент 14",
-                            IsApproved = false,
                             PhoneNumber = "+375 29 1000280",
                             Role = 0
                         },
@@ -2849,7 +2832,6 @@ namespace OOP_LR1.Migrations
                             DocumentType = "Паспорт",
                             Email = "client15@example.com",
                             FullName = "Клиент 15",
-                            IsApproved = false,
                             PhoneNumber = "+375 29 1000300",
                             Role = 0
                         },
@@ -2863,7 +2845,6 @@ namespace OOP_LR1.Migrations
                             DocumentType = "Паспорт",
                             Email = "client16@example.com",
                             FullName = "Клиент 16",
-                            IsApproved = false,
                             PhoneNumber = "+375 29 1000320",
                             Role = 0
                         },
@@ -2877,7 +2858,6 @@ namespace OOP_LR1.Migrations
                             DocumentType = "Паспорт",
                             Email = "client17@example.com",
                             FullName = "Клиент 17",
-                            IsApproved = false,
                             PhoneNumber = "+375 29 1000340",
                             Role = 0
                         },
@@ -2891,7 +2871,6 @@ namespace OOP_LR1.Migrations
                             DocumentType = "Паспорт",
                             Email = "client18@example.com",
                             FullName = "Клиент 18",
-                            IsApproved = false,
                             PhoneNumber = "+375 29 1000360",
                             Role = 0
                         },
@@ -2905,7 +2884,6 @@ namespace OOP_LR1.Migrations
                             DocumentType = "Паспорт",
                             Email = "client19@example.com",
                             FullName = "Клиент 19",
-                            IsApproved = false,
                             PhoneNumber = "+375 29 1000380",
                             Role = 0
                         },
@@ -2919,7 +2897,6 @@ namespace OOP_LR1.Migrations
                             DocumentType = "Паспорт",
                             Email = "client20@example.com",
                             FullName = "Клиент 20",
-                            IsApproved = false,
                             PhoneNumber = "+375 29 1000400",
                             Role = 0
                         },
@@ -2933,7 +2910,6 @@ namespace OOP_LR1.Migrations
                             DocumentType = "Паспорт",
                             Email = "client21@example.com",
                             FullName = "Клиент 21",
-                            IsApproved = false,
                             PhoneNumber = "+375 29 1000420",
                             Role = 0
                         },
@@ -2947,7 +2923,6 @@ namespace OOP_LR1.Migrations
                             DocumentType = "Паспорт",
                             Email = "client22@example.com",
                             FullName = "Клиент 22",
-                            IsApproved = false,
                             PhoneNumber = "+375 29 1000440",
                             Role = 0
                         },
@@ -2961,7 +2936,6 @@ namespace OOP_LR1.Migrations
                             DocumentType = "Паспорт",
                             Email = "client23@example.com",
                             FullName = "Клиент 23",
-                            IsApproved = false,
                             PhoneNumber = "+375 29 1000460",
                             Role = 0
                         },
@@ -2975,7 +2949,6 @@ namespace OOP_LR1.Migrations
                             DocumentType = "Паспорт",
                             Email = "client24@example.com",
                             FullName = "Клиент 24",
-                            IsApproved = false,
                             PhoneNumber = "+375 29 1000480",
                             Role = 0
                         },
@@ -2989,7 +2962,6 @@ namespace OOP_LR1.Migrations
                             DocumentType = "Паспорт",
                             Email = "client25@example.com",
                             FullName = "Клиент 25",
-                            IsApproved = false,
                             PhoneNumber = "+375 29 1000500",
                             Role = 0
                         },
@@ -3003,7 +2975,6 @@ namespace OOP_LR1.Migrations
                             DocumentType = "Паспорт",
                             Email = "client26@example.com",
                             FullName = "Клиент 26",
-                            IsApproved = false,
                             PhoneNumber = "+375 29 1000520",
                             Role = 0
                         },
@@ -3017,7 +2988,6 @@ namespace OOP_LR1.Migrations
                             DocumentType = "Паспорт",
                             Email = "client27@example.com",
                             FullName = "Клиент 27",
-                            IsApproved = false,
                             PhoneNumber = "+375 29 1000540",
                             Role = 0
                         },
@@ -3031,7 +3001,6 @@ namespace OOP_LR1.Migrations
                             DocumentType = "Паспорт",
                             Email = "client28@example.com",
                             FullName = "Клиент 28",
-                            IsApproved = false,
                             PhoneNumber = "+375 29 1000560",
                             Role = 0
                         },
@@ -3045,7 +3014,6 @@ namespace OOP_LR1.Migrations
                             DocumentType = "Паспорт",
                             Email = "client29@example.com",
                             FullName = "Клиент 29",
-                            IsApproved = false,
                             PhoneNumber = "+375 29 1000580",
                             Role = 0
                         },
@@ -3059,7 +3027,6 @@ namespace OOP_LR1.Migrations
                             DocumentType = "Паспорт",
                             Email = "client30@example.com",
                             FullName = "Клиент 30",
-                            IsApproved = false,
                             PhoneNumber = "+375 29 1000600",
                             Role = 0
                         },
@@ -3073,7 +3040,6 @@ namespace OOP_LR1.Migrations
                             DocumentType = "Паспорт",
                             Email = "client31@example.com",
                             FullName = "Клиент 31",
-                            IsApproved = false,
                             PhoneNumber = "+375 29 1000620",
                             Role = 0
                         },
@@ -3087,7 +3053,6 @@ namespace OOP_LR1.Migrations
                             DocumentType = "Паспорт",
                             Email = "client32@example.com",
                             FullName = "Клиент 32",
-                            IsApproved = false,
                             PhoneNumber = "+375 29 1000640",
                             Role = 0
                         },
@@ -3101,7 +3066,6 @@ namespace OOP_LR1.Migrations
                             DocumentType = "Паспорт",
                             Email = "client33@example.com",
                             FullName = "Клиент 33",
-                            IsApproved = false,
                             PhoneNumber = "+375 29 1000660",
                             Role = 0
                         },
@@ -3115,7 +3079,6 @@ namespace OOP_LR1.Migrations
                             DocumentType = "Паспорт",
                             Email = "client34@example.com",
                             FullName = "Клиент 34",
-                            IsApproved = false,
                             PhoneNumber = "+375 29 1000680",
                             Role = 0
                         },
@@ -3129,7 +3092,6 @@ namespace OOP_LR1.Migrations
                             DocumentType = "Паспорт",
                             Email = "client35@example.com",
                             FullName = "Клиент 35",
-                            IsApproved = false,
                             PhoneNumber = "+375 29 1000700",
                             Role = 0
                         },
@@ -3143,7 +3105,6 @@ namespace OOP_LR1.Migrations
                             DocumentType = "Паспорт",
                             Email = "client36@example.com",
                             FullName = "Клиент 36",
-                            IsApproved = false,
                             PhoneNumber = "+375 29 1000720",
                             Role = 0
                         },
@@ -3157,7 +3118,6 @@ namespace OOP_LR1.Migrations
                             DocumentType = "Паспорт",
                             Email = "client37@example.com",
                             FullName = "Клиент 37",
-                            IsApproved = false,
                             PhoneNumber = "+375 29 1000740",
                             Role = 0
                         },
@@ -3171,7 +3131,6 @@ namespace OOP_LR1.Migrations
                             DocumentType = "Паспорт",
                             Email = "client38@example.com",
                             FullName = "Клиент 38",
-                            IsApproved = false,
                             PhoneNumber = "+375 29 1000760",
                             Role = 0
                         },
@@ -3185,7 +3144,6 @@ namespace OOP_LR1.Migrations
                             DocumentType = "Паспорт",
                             Email = "client39@example.com",
                             FullName = "Клиент 39",
-                            IsApproved = false,
                             PhoneNumber = "+375 29 1000780",
                             Role = 0
                         },
@@ -3199,7 +3157,6 @@ namespace OOP_LR1.Migrations
                             DocumentType = "Паспорт",
                             Email = "client40@example.com",
                             FullName = "Клиент 40",
-                            IsApproved = false,
                             PhoneNumber = "+375 29 1000800",
                             Role = 0
                         },
@@ -3213,7 +3170,6 @@ namespace OOP_LR1.Migrations
                             DocumentType = "Паспорт",
                             Email = "client41@example.com",
                             FullName = "Клиент 41",
-                            IsApproved = false,
                             PhoneNumber = "+375 29 1000820",
                             Role = 0
                         },
@@ -3227,7 +3183,6 @@ namespace OOP_LR1.Migrations
                             DocumentType = "Паспорт",
                             Email = "client42@example.com",
                             FullName = "Клиент 42",
-                            IsApproved = false,
                             PhoneNumber = "+375 29 1000840",
                             Role = 0
                         },
@@ -3241,7 +3196,6 @@ namespace OOP_LR1.Migrations
                             DocumentType = "Паспорт",
                             Email = "client43@example.com",
                             FullName = "Клиент 43",
-                            IsApproved = false,
                             PhoneNumber = "+375 29 1000860",
                             Role = 0
                         },
@@ -3255,7 +3209,6 @@ namespace OOP_LR1.Migrations
                             DocumentType = "Паспорт",
                             Email = "client44@example.com",
                             FullName = "Клиент 44",
-                            IsApproved = false,
                             PhoneNumber = "+375 29 1000880",
                             Role = 0
                         },
@@ -3269,7 +3222,6 @@ namespace OOP_LR1.Migrations
                             DocumentType = "Паспорт",
                             Email = "client45@example.com",
                             FullName = "Клиент 45",
-                            IsApproved = false,
                             PhoneNumber = "+375 29 1000900",
                             Role = 0
                         },
@@ -3283,7 +3235,6 @@ namespace OOP_LR1.Migrations
                             DocumentType = "Паспорт",
                             Email = "client46@example.com",
                             FullName = "Клиент 46",
-                            IsApproved = false,
                             PhoneNumber = "+375 29 1000920",
                             Role = 0
                         },
@@ -3297,7 +3248,6 @@ namespace OOP_LR1.Migrations
                             DocumentType = "Паспорт",
                             Email = "client47@example.com",
                             FullName = "Клиент 47",
-                            IsApproved = false,
                             PhoneNumber = "+375 29 1000940",
                             Role = 0
                         },
@@ -3311,7 +3261,6 @@ namespace OOP_LR1.Migrations
                             DocumentType = "Паспорт",
                             Email = "client48@example.com",
                             FullName = "Клиент 48",
-                            IsApproved = false,
                             PhoneNumber = "+375 29 1000960",
                             Role = 0
                         },
@@ -3325,7 +3274,6 @@ namespace OOP_LR1.Migrations
                             DocumentType = "Паспорт",
                             Email = "client49@example.com",
                             FullName = "Клиент 49",
-                            IsApproved = false,
                             PhoneNumber = "+375 29 1000980",
                             Role = 0
                         },
@@ -3339,7 +3287,6 @@ namespace OOP_LR1.Migrations
                             DocumentType = "Паспорт",
                             Email = "client50@example.com",
                             FullName = "Клиент 50",
-                            IsApproved = false,
                             PhoneNumber = "+375 29 1001000",
                             Role = 0
                         },
@@ -3353,7 +3300,6 @@ namespace OOP_LR1.Migrations
                             DocumentType = "Паспорт",
                             Email = "client51@example.com",
                             FullName = "Клиент 51",
-                            IsApproved = false,
                             PhoneNumber = "+375 29 1001020",
                             Role = 0
                         },
@@ -3367,7 +3313,6 @@ namespace OOP_LR1.Migrations
                             DocumentType = "Паспорт",
                             Email = "client52@example.com",
                             FullName = "Клиент 52",
-                            IsApproved = false,
                             PhoneNumber = "+375 29 1001040",
                             Role = 0
                         },
@@ -3381,7 +3326,6 @@ namespace OOP_LR1.Migrations
                             DocumentType = "Паспорт",
                             Email = "client53@example.com",
                             FullName = "Клиент 53",
-                            IsApproved = false,
                             PhoneNumber = "+375 29 1001060",
                             Role = 0
                         },
@@ -3395,7 +3339,6 @@ namespace OOP_LR1.Migrations
                             DocumentType = "Паспорт",
                             Email = "client54@example.com",
                             FullName = "Клиент 54",
-                            IsApproved = false,
                             PhoneNumber = "+375 29 1001080",
                             Role = 0
                         },
@@ -3409,7 +3352,6 @@ namespace OOP_LR1.Migrations
                             DocumentType = "Паспорт",
                             Email = "client55@example.com",
                             FullName = "Клиент 55",
-                            IsApproved = false,
                             PhoneNumber = "+375 29 1001100",
                             Role = 0
                         },
@@ -3423,7 +3365,6 @@ namespace OOP_LR1.Migrations
                             DocumentType = "Паспорт",
                             Email = "client56@example.com",
                             FullName = "Клиент 56",
-                            IsApproved = false,
                             PhoneNumber = "+375 29 1001120",
                             Role = 0
                         },
@@ -3437,7 +3378,6 @@ namespace OOP_LR1.Migrations
                             DocumentType = "Паспорт",
                             Email = "client57@example.com",
                             FullName = "Клиент 57",
-                            IsApproved = false,
                             PhoneNumber = "+375 29 1001140",
                             Role = 0
                         },
@@ -3451,7 +3391,6 @@ namespace OOP_LR1.Migrations
                             DocumentType = "Паспорт",
                             Email = "client58@example.com",
                             FullName = "Клиент 58",
-                            IsApproved = false,
                             PhoneNumber = "+375 29 1001160",
                             Role = 0
                         },
@@ -3465,7 +3404,6 @@ namespace OOP_LR1.Migrations
                             DocumentType = "Паспорт",
                             Email = "client59@example.com",
                             FullName = "Клиент 59",
-                            IsApproved = false,
                             PhoneNumber = "+375 29 1001180",
                             Role = 0
                         },
@@ -3479,7 +3417,6 @@ namespace OOP_LR1.Migrations
                             DocumentType = "Паспорт",
                             Email = "client60@example.com",
                             FullName = "Клиент 60",
-                            IsApproved = false,
                             PhoneNumber = "+375 29 1001200",
                             Role = 0
                         },
@@ -3493,7 +3430,6 @@ namespace OOP_LR1.Migrations
                             DocumentType = "Паспорт",
                             Email = "client61@example.com",
                             FullName = "Клиент 61",
-                            IsApproved = false,
                             PhoneNumber = "+375 29 1001220",
                             Role = 0
                         },
@@ -3507,7 +3443,6 @@ namespace OOP_LR1.Migrations
                             DocumentType = "Паспорт",
                             Email = "client62@example.com",
                             FullName = "Клиент 62",
-                            IsApproved = false,
                             PhoneNumber = "+375 29 1001240",
                             Role = 0
                         },
@@ -3521,7 +3456,6 @@ namespace OOP_LR1.Migrations
                             DocumentType = "Паспорт",
                             Email = "client63@example.com",
                             FullName = "Клиент 63",
-                            IsApproved = false,
                             PhoneNumber = "+375 29 1001260",
                             Role = 0
                         },
@@ -3535,7 +3469,6 @@ namespace OOP_LR1.Migrations
                             DocumentType = "Паспорт",
                             Email = "client64@example.com",
                             FullName = "Клиент 64",
-                            IsApproved = false,
                             PhoneNumber = "+375 29 1001280",
                             Role = 0
                         },
@@ -3549,7 +3482,6 @@ namespace OOP_LR1.Migrations
                             DocumentType = "Паспорт",
                             Email = "client65@example.com",
                             FullName = "Клиент 65",
-                            IsApproved = false,
                             PhoneNumber = "+375 29 1001300",
                             Role = 0
                         },
@@ -3563,7 +3495,6 @@ namespace OOP_LR1.Migrations
                             DocumentType = "Паспорт",
                             Email = "client66@example.com",
                             FullName = "Клиент 66",
-                            IsApproved = false,
                             PhoneNumber = "+375 29 1001320",
                             Role = 0
                         },
@@ -3577,7 +3508,6 @@ namespace OOP_LR1.Migrations
                             DocumentType = "Паспорт",
                             Email = "client67@example.com",
                             FullName = "Клиент 67",
-                            IsApproved = false,
                             PhoneNumber = "+375 29 1001340",
                             Role = 0
                         },
@@ -3591,7 +3521,6 @@ namespace OOP_LR1.Migrations
                             DocumentType = "Паспорт",
                             Email = "client68@example.com",
                             FullName = "Клиент 68",
-                            IsApproved = false,
                             PhoneNumber = "+375 29 1001360",
                             Role = 0
                         },
@@ -3605,7 +3534,6 @@ namespace OOP_LR1.Migrations
                             DocumentType = "Паспорт",
                             Email = "client69@example.com",
                             FullName = "Клиент 69",
-                            IsApproved = false,
                             PhoneNumber = "+375 29 1001380",
                             Role = 0
                         },
@@ -3619,7 +3547,6 @@ namespace OOP_LR1.Migrations
                             DocumentType = "Паспорт",
                             Email = "client70@example.com",
                             FullName = "Клиент 70",
-                            IsApproved = false,
                             PhoneNumber = "+375 29 1001400",
                             Role = 0
                         },
@@ -3633,7 +3560,6 @@ namespace OOP_LR1.Migrations
                             DocumentType = "Паспорт",
                             Email = "client71@example.com",
                             FullName = "Клиент 71",
-                            IsApproved = false,
                             PhoneNumber = "+375 29 1001420",
                             Role = 0
                         },
@@ -3647,7 +3573,6 @@ namespace OOP_LR1.Migrations
                             DocumentType = "Паспорт",
                             Email = "client72@example.com",
                             FullName = "Клиент 72",
-                            IsApproved = false,
                             PhoneNumber = "+375 29 1001440",
                             Role = 0
                         },
@@ -3661,7 +3586,6 @@ namespace OOP_LR1.Migrations
                             DocumentType = "Паспорт",
                             Email = "client73@example.com",
                             FullName = "Клиент 73",
-                            IsApproved = false,
                             PhoneNumber = "+375 29 1001460",
                             Role = 0
                         },
@@ -3675,7 +3599,6 @@ namespace OOP_LR1.Migrations
                             DocumentType = "Паспорт",
                             Email = "client74@example.com",
                             FullName = "Клиент 74",
-                            IsApproved = false,
                             PhoneNumber = "+375 29 1001480",
                             Role = 0
                         },
@@ -3689,7 +3612,6 @@ namespace OOP_LR1.Migrations
                             DocumentType = "Паспорт",
                             Email = "client75@example.com",
                             FullName = "Клиент 75",
-                            IsApproved = false,
                             PhoneNumber = "+375 29 1001500",
                             Role = 0
                         },
@@ -3703,7 +3625,6 @@ namespace OOP_LR1.Migrations
                             DocumentType = "Паспорт",
                             Email = "client76@example.com",
                             FullName = "Клиент 76",
-                            IsApproved = false,
                             PhoneNumber = "+375 29 1001520",
                             Role = 0
                         },
@@ -3717,7 +3638,6 @@ namespace OOP_LR1.Migrations
                             DocumentType = "Паспорт",
                             Email = "client77@example.com",
                             FullName = "Клиент 77",
-                            IsApproved = false,
                             PhoneNumber = "+375 29 1001540",
                             Role = 0
                         },
@@ -3731,7 +3651,6 @@ namespace OOP_LR1.Migrations
                             DocumentType = "Паспорт",
                             Email = "client78@example.com",
                             FullName = "Клиент 78",
-                            IsApproved = false,
                             PhoneNumber = "+375 29 1001560",
                             Role = 0
                         },
@@ -3745,7 +3664,6 @@ namespace OOP_LR1.Migrations
                             DocumentType = "Паспорт",
                             Email = "client79@example.com",
                             FullName = "Клиент 79",
-                            IsApproved = false,
                             PhoneNumber = "+375 29 1001580",
                             Role = 0
                         },
@@ -3759,7 +3677,6 @@ namespace OOP_LR1.Migrations
                             DocumentType = "Паспорт",
                             Email = "client80@example.com",
                             FullName = "Клиент 80",
-                            IsApproved = false,
                             PhoneNumber = "+375 29 1001600",
                             Role = 0
                         },
@@ -3773,7 +3690,6 @@ namespace OOP_LR1.Migrations
                             DocumentType = "Паспорт",
                             Email = "client81@example.com",
                             FullName = "Клиент 81",
-                            IsApproved = false,
                             PhoneNumber = "+375 29 1001620",
                             Role = 0
                         },
@@ -3787,7 +3703,6 @@ namespace OOP_LR1.Migrations
                             DocumentType = "Паспорт",
                             Email = "client82@example.com",
                             FullName = "Клиент 82",
-                            IsApproved = false,
                             PhoneNumber = "+375 29 1001640",
                             Role = 0
                         },
@@ -3801,7 +3716,6 @@ namespace OOP_LR1.Migrations
                             DocumentType = "Паспорт",
                             Email = "client83@example.com",
                             FullName = "Клиент 83",
-                            IsApproved = false,
                             PhoneNumber = "+375 29 1001660",
                             Role = 0
                         },
@@ -3815,7 +3729,6 @@ namespace OOP_LR1.Migrations
                             DocumentType = "Паспорт",
                             Email = "client84@example.com",
                             FullName = "Клиент 84",
-                            IsApproved = false,
                             PhoneNumber = "+375 29 1001680",
                             Role = 0
                         },
@@ -3829,7 +3742,6 @@ namespace OOP_LR1.Migrations
                             DocumentType = "Паспорт",
                             Email = "client85@example.com",
                             FullName = "Клиент 85",
-                            IsApproved = false,
                             PhoneNumber = "+375 29 1001700",
                             Role = 0
                         },
@@ -3843,7 +3755,6 @@ namespace OOP_LR1.Migrations
                             DocumentType = "Паспорт",
                             Email = "client86@example.com",
                             FullName = "Клиент 86",
-                            IsApproved = false,
                             PhoneNumber = "+375 29 1001720",
                             Role = 0
                         },
@@ -3857,7 +3768,6 @@ namespace OOP_LR1.Migrations
                             DocumentType = "Паспорт",
                             Email = "client87@example.com",
                             FullName = "Клиент 87",
-                            IsApproved = false,
                             PhoneNumber = "+375 29 1001740",
                             Role = 0
                         },
@@ -3871,7 +3781,6 @@ namespace OOP_LR1.Migrations
                             DocumentType = "Паспорт",
                             Email = "client88@example.com",
                             FullName = "Клиент 88",
-                            IsApproved = false,
                             PhoneNumber = "+375 29 1001760",
                             Role = 0
                         },
@@ -3885,7 +3794,6 @@ namespace OOP_LR1.Migrations
                             DocumentType = "Паспорт",
                             Email = "client89@example.com",
                             FullName = "Клиент 89",
-                            IsApproved = false,
                             PhoneNumber = "+375 29 1001780",
                             Role = 0
                         },
@@ -3899,7 +3807,6 @@ namespace OOP_LR1.Migrations
                             DocumentType = "Паспорт",
                             Email = "client90@example.com",
                             FullName = "Клиент 90",
-                            IsApproved = false,
                             PhoneNumber = "+375 29 1001800",
                             Role = 0
                         },
@@ -3913,7 +3820,6 @@ namespace OOP_LR1.Migrations
                             DocumentType = "Паспорт",
                             Email = "client91@example.com",
                             FullName = "Клиент 91",
-                            IsApproved = false,
                             PhoneNumber = "+375 29 1001820",
                             Role = 0
                         },
@@ -3927,7 +3833,6 @@ namespace OOP_LR1.Migrations
                             DocumentType = "Паспорт",
                             Email = "client92@example.com",
                             FullName = "Клиент 92",
-                            IsApproved = false,
                             PhoneNumber = "+375 29 1001840",
                             Role = 0
                         },
@@ -3941,7 +3846,6 @@ namespace OOP_LR1.Migrations
                             DocumentType = "Паспорт",
                             Email = "client93@example.com",
                             FullName = "Клиент 93",
-                            IsApproved = false,
                             PhoneNumber = "+375 29 1001860",
                             Role = 0
                         },
@@ -3955,7 +3859,6 @@ namespace OOP_LR1.Migrations
                             DocumentType = "Паспорт",
                             Email = "client94@example.com",
                             FullName = "Клиент 94",
-                            IsApproved = false,
                             PhoneNumber = "+375 29 1001880",
                             Role = 0
                         },
@@ -3969,7 +3872,6 @@ namespace OOP_LR1.Migrations
                             DocumentType = "Паспорт",
                             Email = "client95@example.com",
                             FullName = "Клиент 95",
-                            IsApproved = false,
                             PhoneNumber = "+375 29 1001900",
                             Role = 0
                         },
@@ -3983,7 +3885,6 @@ namespace OOP_LR1.Migrations
                             DocumentType = "Паспорт",
                             Email = "client96@example.com",
                             FullName = "Клиент 96",
-                            IsApproved = false,
                             PhoneNumber = "+375 29 1001920",
                             Role = 0
                         },
@@ -3997,7 +3898,6 @@ namespace OOP_LR1.Migrations
                             DocumentType = "Паспорт",
                             Email = "client97@example.com",
                             FullName = "Клиент 97",
-                            IsApproved = false,
                             PhoneNumber = "+375 29 1001940",
                             Role = 0
                         },
@@ -4011,7 +3911,6 @@ namespace OOP_LR1.Migrations
                             DocumentType = "Паспорт",
                             Email = "client98@example.com",
                             FullName = "Клиент 98",
-                            IsApproved = false,
                             PhoneNumber = "+375 29 1001960",
                             Role = 0
                         },
@@ -4025,7 +3924,6 @@ namespace OOP_LR1.Migrations
                             DocumentType = "Паспорт",
                             Email = "client99@example.com",
                             FullName = "Клиент 99",
-                            IsApproved = false,
                             PhoneNumber = "+375 29 1001980",
                             Role = 0
                         },
@@ -4039,7 +3937,6 @@ namespace OOP_LR1.Migrations
                             DocumentType = "Паспорт",
                             Email = "client100@example.com",
                             FullName = "Клиент 100",
-                            IsApproved = false,
                             PhoneNumber = "+375 29 1002000",
                             Role = 0
                         });

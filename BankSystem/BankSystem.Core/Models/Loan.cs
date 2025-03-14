@@ -7,7 +7,8 @@
         public decimal Amount { get; set; } 
         public decimal InterestRate { get; set; } 
         public int TermInMonths { get; set; } 
-        public DateTime StartDate { get; set; } = DateTime.UtcNow; 
-        public bool IsPaid { get; set; } = false;
+        public bool IsPaid { get; set; }
+        public bool IsApproved { get; set; }
+
     }
 }

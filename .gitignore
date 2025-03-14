@@ -1,39 +1,30 @@
-# Visual Studio
-.vs/
+bin/
+obj/
+*.exe
+*.dll
+*.pdb
 *.suo
 *.user
-*.userprefs
-*.sln.docstates
-*.csproj
-*.sin
-*.sln
-OOP_LR1.sln
-
-# Build results
-[Dd]ebug/
-[Rr]elease/
-x64/
-x86/
-[Aa][Rr][Mm]/
-[Bb]in/
-[Oo]bj/
-
-# Packages
-*.nupkg
-packages/
-*.snupkg
-
-# Others
-*.log
-*.tlog
-*.vsix
 *.cache
-*.pdb
-*.mdb
-*.opendb
-*.ilk
-*.idb
-*.pdb
+*.vs/
 
-# NuGet
-*.nuspec
+packages/
+*.nupkg
+
+*.db
+*.db-shm
+*.db-wal
+
+logs.txt
+
+.vs/
+.idea/
+*.sln
+*.csproj.user
+
+*.bak
+*.tmp
+
+docs/
+*.pdf
+*.docx

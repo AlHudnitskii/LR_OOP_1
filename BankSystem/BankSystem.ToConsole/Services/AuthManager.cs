@@ -1,6 +1,8 @@
 ﻿using OOP_LR1.BankSystem.Application.Services;
 using OOP_LR1.BankSystem.Core.Models;
 using OOP_LR1.BankSystem.Infrastructure;
+using OOP_LR1.BankSystem.Infrastructure.Logging;
+using System.Globalization;
 
 namespace OOP_LR1.BankSystem.ToConsole.Services
 {
@@ -8,11 +10,13 @@ namespace OOP_LR1.BankSystem.ToConsole.Services
     {
         private readonly AuthService _authService;
         private readonly UserService _userService;
+        private readonly ILogger _logger;
         private User _currentUser;
 
-        public AuthManager(AuthService authService)
+        public AuthManager(AuthService authService, ILogger logger)
         {
             _authService = authService;
+            _logger = logger;
         }
 
         public User CurrentUser => _currentUser;
@@ -28,7 +32,7 @@ namespace OOP_LR1.BankSystem.ToConsole.Services
                 fullName = Console.ReadLine();
                 if (!UserValidator.ValidateFullName(fullName))
                 {
-                    Console.WriteLine("Некорректное ФИО. Используйте только буквы и пробелы.");
+                    Console.WriteLine("Некорректное ФИО. Используйте только буквы английского алфавита и пробелы.");
                 }
             } while (!UserValidator.ValidateFullName(fullName));
 
@@ -43,16 +47,7 @@ namespace OOP_LR1.BankSystem.ToConsole.Services
                 }
             } while (!UserValidator.ValidateDocumentNumber(documentNumber));
 
-            string documentType;
-            do
-            {
-                Console.Write("Введите тип документа (Паспорт, ID-карта, Водительское удостоверение): ");
-                documentType = Console.ReadLine();
-                if (!UserValidator.ValidateDocumentType(documentType))
-                {
-                    Console.WriteLine("Некорректный тип документа. Выберите из списка.");
-                }
-            } while (!UserValidator.ValidateDocumentType(documentType));
+            string documentType = UserValidator.SelectDocumentType();
 
             string citizenship;
             do
@@ -61,7 +56,7 @@ namespace OOP_LR1.BankSystem.ToConsole.Services
                 citizenship = Console.ReadLine();
                 if (!UserValidator.ValidateCitizenship(citizenship))
                 {
-                    Console.WriteLine("Некорректное гражданство. Используйте только буквы.");
+                    Console.WriteLine("Некорректное гражданство. Используйте только буквы английского алфавита.");
                 }
             } while (!UserValidator.ValidateCitizenship(citizenship));
 
@@ -72,18 +67,18 @@ namespace OOP_LR1.BankSystem.ToConsole.Services
                 countryOfResidence = Console.ReadLine();
                 if (!UserValidator.ValidateCountryOfResidence(countryOfResidence))
                 {
-                    Console.WriteLine("Некорректная страна проживания. Используйте только буквы.");
+                    Console.WriteLine("Некорректная страна проживания. Используйте только буквы  английского алфавита.");
                 }
             } while (!UserValidator.ValidateCountryOfResidence(countryOfResidence));
 
             string phoneNumber;
             do
             {
-                Console.Write("Введите номер телефона (+375XXXXXXXXX): ");
+                Console.Write("Введите номер телефона в формате +XXXXXXXXXXXX (от 7 до 15 цифр): ");
                 phoneNumber = Console.ReadLine();
                 if (!UserValidator.ValidatePhoneNumber(phoneNumber))
                 {
-                    Console.WriteLine("Некорректный номер телефона. Введите в формате +375XXXXXXXXX.");
+                    Console.WriteLine("Некорректный номер телефона. Введите в формате +XXXXXXXXXXXX (от 7 до 15 цифр).");
                 }
             } while (!UserValidator.ValidatePhoneNumber(phoneNumber));
 
@@ -119,6 +114,7 @@ namespace OOP_LR1.BankSystem.ToConsole.Services
 
             var user = new User
             {
+                Id = Guid.NewGuid().ToString(),
                 FullName = fullName,
                 DocumentNumber = documentNumber,
                 DocumentType = documentType,
@@ -127,18 +123,35 @@ namespace OOP_LR1.BankSystem.ToConsole.Services
                 PhoneNumber = phoneNumber,
                 Email = email,
                 Role = role,
-                BankId = bankId
+                BankId = bankId,
+                IsApproved = false,
             };
 
             try
             {
                 context.Users.Add(user);
                 context.SaveChanges();
-                Console.WriteLine("Регистрация прошла успешно!");
+                _logger.Log($"Пользователь {user.Email} зарегистрирован. Ожидает подтверждения менеджера.", LogLevel.Info);
             }
             catch (Exception ex)
             {
+                _logger.Log($"Ошибка при регистрации пользователя: {ex.Message}", LogLevel.Error);  
                 Console.WriteLine($"Ошибка: {ex.Message}");
+            }
+        }
+        public void ApproveUserRegistration(string userId, BankDbContext context)
+        {
+            var user = context.Users.FirstOrDefault(u => u.Id == userId);
+            if (user != null)
+            {
+                user.IsApproved = true;
+                context.SaveChanges();
+                _logger.Log($"Регистрация пользователя {user.Email} подтверждена менеджером.", LogLevel.Info);
+                Console.WriteLine("Регистрация подтверждена.");
+            }
+            else
+            {
+                Console.WriteLine("Пользователь не найден.");
             }
         }
 
@@ -174,10 +187,12 @@ namespace OOP_LR1.BankSystem.ToConsole.Services
             if (user != null)
             {
                 _currentUser = user;
+                _logger.Log($"Пользователь {user.Email} вошел в систему.", LogLevel.Info);
                 Console.WriteLine($"Добро пожаловать, {user.FullName}!");
             }
             else
             {
+                _logger.Log($"Неудачная попытка входа для email: {email}.", LogLevel.Warning);
                 Console.WriteLine("Пользователь не найден.");
             }
 
@@ -192,8 +207,31 @@ namespace OOP_LR1.BankSystem.ToConsole.Services
 
         public void LogoutUser()
         {
-            _currentUser = null; 
-            Console.WriteLine("Вы вышли из системы.");
+            if (_currentUser != null)
+            {
+                _logger.Log($"Пользователь {_currentUser.Email} вышел из системы.", LogLevel.Info);
+                _currentUser = null;
+                Console.WriteLine("Вы вышли из системы.");
+            }
+            else
+            {
+                Console.WriteLine("Нет активного пользователя для выхода.");
+            }
+        }
+
+
+        public void UpdateUserBank(BankDbContext context, string bankId)
+        {
+            if (_currentUser != null)
+            {
+                _currentUser.BankId = bankId;
+                context.SaveChanges();
+                Console.WriteLine($"Банк успешно изменен на {bankId}.");
+            }
+            else
+            {
+                Console.WriteLine("Пользователь не авторизован.");
+            }
         }
     }
 }

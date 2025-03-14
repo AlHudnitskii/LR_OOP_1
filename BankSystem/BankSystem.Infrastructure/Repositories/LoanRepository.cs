@@ -6,6 +6,12 @@ namespace OOP_LR1.BankSystem.Infrastructure.Repositories
     public class LoanRepository : ILoanRepository
     {
         private readonly List<Loan> _loans = new List<Loan>();
+        private readonly BankDbContext _context;
+
+        public LoanRepository(BankDbContext context)
+        {
+            _context = context;
+        }
 
         public void AddLoan(Loan loan)
         {

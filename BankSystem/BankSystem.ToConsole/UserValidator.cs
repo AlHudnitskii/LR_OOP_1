@@ -14,10 +14,31 @@ namespace OOP_LR1.BankSystem.ToConsole
             return !string.IsNullOrWhiteSpace(documentNumber) && Regex.IsMatch(documentNumber, @"^\d{9}$");
         }
 
-        public static bool ValidateDocumentType(string documentType)
+        public static string SelectDocumentType()
         {
-            var validTypes = new[] { "Паспорт", "ID-карта", "Водительское удостоверение" };
-            return validTypes.Contains(documentType);
+            Console.WriteLine("Выберите тип документа:");
+            Console.WriteLine("1. Паспорт");
+            Console.WriteLine("2. ID-карта");
+            Console.WriteLine("3. Водительское удостоверение");
+
+            while (true)
+            {
+                Console.Write("Ваш выбор: ");
+                string input = Console.ReadLine();
+
+                switch (input)
+                {
+                    case "1":
+                        return "Паспорт";
+                    case "2":
+                        return "ID-карта";
+                    case "3":
+                        return "Водительское удостоверение";
+                    default:
+                        Console.WriteLine("Неверный выбор. Пожалуйста, введите число от 1 до 3.");
+                        break;
+                }
+            }
         }
 
         public static bool ValidateCitizenship(string citizenship)
@@ -32,9 +53,9 @@ namespace OOP_LR1.BankSystem.ToConsole
 
         public static bool ValidatePhoneNumber(string phoneNumber)
         {
-            return !string.IsNullOrWhiteSpace(phoneNumber) && Regex.IsMatch(phoneNumber, @"^\+$");
+            var regex = new Regex(@"^\+\d{7,15}$");
+            return regex.IsMatch(phoneNumber);
         }
-
         public static bool ValidateEmail(string email)
         {
             return !string.IsNullOrWhiteSpace(email) && Regex.IsMatch(email, @"^[^@\s]+@[^@\s]+\.[^@\s]+$");

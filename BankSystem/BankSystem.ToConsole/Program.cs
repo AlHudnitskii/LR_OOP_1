@@ -17,13 +17,14 @@ namespace OOP_LR1.BankSystem.ToConsole
             using var context = new BankDbContext();
 
             var userRepository = new UserRepository(context);
-            var logger = new Logger("logs.txt");
+            var logger = new Logger("logs.txt", encryptLogs: true, logToConsole: false);
+
             var authService = new AuthService(userRepository, logger);
             var userService = new UserService(userRepository);
 
-            var authManager = new AuthManager(authService);
+            var authManager = new AuthManager(authService, logger);
             var userManager = new UserManager(userService);
-            var menuManager = new MenuManager(authManager, userManager);
+            var menuManager = new MenuManager(authManager, userManager, logger);
 
             var selectedBank = menuManager.SelectBank(context);
             Console.WriteLine($"Выбран банк: {selectedBank.Name}");
@@ -36,7 +37,7 @@ namespace OOP_LR1.BankSystem.ToConsole
 
                 if (choice == "1")
                 {
-                    menuManager.ShowCurrentUser();
+                    authManager.RegisterUser(context, selectedBank.Id); 
                 }
                 else if (choice == "2")
                 {
@@ -45,7 +46,7 @@ namespace OOP_LR1.BankSystem.ToConsole
                     {
                         while (true)
                         {
-                            menuManager.ShowRoleMenu(user);
+                            menuManager.ShowRoleMenu(user, context);
                             Console.Write("Выберите действие: ");
                             string roleChoice = Console.ReadLine();
 
@@ -71,7 +72,13 @@ namespace OOP_LR1.BankSystem.ToConsole
                 {
                     menuManager.ShowCurrentUser();
                 }
-                else if (choice == "6")
+                else if (choice == "6") 
+                {
+                    Console.WriteLine("Вы можете выбрать другой банк.");
+                    selectedBank = menuManager.SelectBank(context);
+                    continue;
+                }
+                else if (choice == "7")
                 {
                     Environment.Exit(0);
                 }
