@@ -1,9 +1,60 @@
 <mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/132.0.0.0 Safari/537.36 OPR/117.0.0.0" version="26.1.1">
   <diagram name="Страница — 1" id="i4h-a8U6-AIxHLR94Puu">
-    <mxGraphModel>
+    <mxGraphModel dx="1048" dy="575" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
+        <mxCell id="kBZHBOI9KrkaNfZJPFoU-8" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="kBZHBOI9KrkaNfZJPFoU-1" target="kBZHBOI9KrkaNfZJPFoU-7">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="kBZHBOI9KrkaNfZJPFoU-10" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="kBZHBOI9KrkaNfZJPFoU-1" target="kBZHBOI9KrkaNfZJPFoU-2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="kBZHBOI9KrkaNfZJPFoU-11" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="kBZHBOI9KrkaNfZJPFoU-1" target="kBZHBOI9KrkaNfZJPFoU-5">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="kBZHBOI9KrkaNfZJPFoU-13" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="kBZHBOI9KrkaNfZJPFoU-1" target="kBZHBOI9KrkaNfZJPFoU-12">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="kBZHBOI9KrkaNfZJPFoU-15" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="kBZHBOI9KrkaNfZJPFoU-1" target="kBZHBOI9KrkaNfZJPFoU-14">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="kBZHBOI9KrkaNfZJPFoU-17" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="kBZHBOI9KrkaNfZJPFoU-1" target="kBZHBOI9KrkaNfZJPFoU-16">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="kBZHBOI9KrkaNfZJPFoU-19" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="kBZHBOI9KrkaNfZJPFoU-1" target="kBZHBOI9KrkaNfZJPFoU-18">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="kBZHBOI9KrkaNfZJPFoU-1" value="&lt;div&gt;Основное меню&lt;/div&gt;" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="331" y="93" width="140" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="kBZHBOI9KrkaNfZJPFoU-2" value="Выход из программы&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="651" y="183" width="140" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="kBZHBOI9KrkaNfZJPFoU-5" value="Выбор другого банка&lt;div&gt;&amp;nbsp;&lt;/div&gt;" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="541" y="253" width="140" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="kBZHBOI9KrkaNfZJPFoU-7" value="Регистрация" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="21" y="183" width="140" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="kBZHBOI9KrkaNfZJPFoU-12" value="Вход" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="111" y="283" width="140" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="kBZHBOI9KrkaNfZJPFoU-14" value="Выход" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="221" y="343" width="140" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="kBZHBOI9KrkaNfZJPFoU-16" value="Показ текущего пользователя" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="481" y="343" width="140" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="kBZHBOI9KrkaNfZJPFoU-18" value="Вы" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="361" y="233" width="140" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="kBZHBOI9KrkaNfZJPFoU-21" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="kBZHBOI9KrkaNfZJPFoU-20" target="kBZHBOI9KrkaNfZJPFoU-1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="kBZHBOI9KrkaNfZJPFoU-20" value="Выбор банка" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="334" width="140" height="70" as="geometry" />
+        </mxCell>
       </root>
     </mxGraphModel>
   </diagram>
