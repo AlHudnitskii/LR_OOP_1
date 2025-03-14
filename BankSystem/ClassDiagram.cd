@@ -1,0 +1,270 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="OOP_LR1.BankSystem.Application.Services.AccountService" BaseTypeListCollapsed="true">
+    <Position X="12.75" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAABAAAAEAAABIQAAAAABCAEMCAIACAAAAAAAEAAAAI=</HashCode>
+      <FileName>BankSystem.Application\Services\AccountService.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="OOP_LR1.BankSystem.Application.Services.AuthService">
+    <Position X="4" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAgAAAAAAAAAAAAAAAAIAABAAAAAAAAAAAAEAA=</HashCode>
+      <FileName>BankSystem.Application\Services\AuthService.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OOP_LR1.BankSystem.Application.Services.BankService">
+    <Position X="7.5" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAABAAAAAQAAAAAAAgAAAAAAAAAAAEACAA=</HashCode>
+      <FileName>BankSystem.Application\Services\BankService.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OOP_LR1.BankSystem.Application.Services.EnterpriseService">
+    <Position X="2.25" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAgAAAAEAAAAAAAAAAiAAAAAAAAAABAQAAAA=</HashCode>
+      <FileName>BankSystem.Application\Services\EnterpriseService.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OOP_LR1.BankSystem.Application.Services.SalaryProjectService">
+    <Position X="9.25" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAQAAAAAABAgAAAAAAAAAIAEAACAAAAAAAAAAAAA=</HashCode>
+      <FileName>BankSystem.Application\Services\SalaryProjectService.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OOP_LR1.BankSystem.Application.Services.UserManagementService">
+    <Position X="11" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAABAAEAAAAEAAAIAAAAAAAAAIAAAEAAAA=</HashCode>
+      <FileName>BankSystem.Application\Services\UserManagementService.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OOP_LR1.BankSystem.Application.Services.UserService">
+    <Position X="0.5" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAgAAAAAQAAAAAAAAAAAAAAAAAACAAAAAAAAAA=</HashCode>
+      <FileName>BankSystem.Application\Services\UserService.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LoanService">
+    <Position X="5.75" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAgAAAAAAABAAAAAAAAAAAIAAAAAIABAAAAAAAQQA=</HashCode>
+      <FileName>BankSystem.Application\Services\LoanService.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OOP_LR1.BankSystem.Core.Models.Account">
+    <Position X="0.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQACAACIAAAAAAAAAAgAAAAAAAgAQgAAACAAAAAAAAA=</HashCode>
+      <FileName>BankSystem.Core\Models\Account.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OOP_LR1.BankSystem.Core.Models.Bank">
+    <Position X="5.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACACAAAAAAAAAAAAAAAAQAAIAAAAiAAAAAAAAAAAA=</HashCode>
+      <FileName>BankSystem.Core\Models\Bank.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OOP_LR1.BankSystem.Core.Models.Enterprise">
+    <Position X="2.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQACgAAAAAAAAAAAAAAAAAQAAAAAAAgAASABAAAAAAA=</HashCode>
+      <FileName>BankSystem.Core\Models\Enterprise.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OOP_LR1.BankSystem.Core.Models.Loan">
+    <Position X="9.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAAAAAAAAAAiIAAEAAQACAAAAAAAAAAA=</HashCode>
+      <FileName>BankSystem.Core\Models\Loan.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OOP_LR1.BankSystem.Core.Models.SalaryProject">
+    <Position X="11" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQACAAAAAAAAAAAAEAAAAAAAAgAEAAAAACAAAEAAAAA=</HashCode>
+      <FileName>BankSystem.Core\Models\SalaryProject.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OOP_LR1.BankSystem.Core.Models.Transaction">
+    <Position X="4" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAACAAAAAAAAAAAACAAAEAAAABAAAAIAAAAAA=</HashCode>
+      <FileName>BankSystem.Core\Models\Transaction.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OOP_LR1.BankSystem.Core.Models.User">
+    <Position X="7.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQACAAAABCAAAIAAEAAAQAAAAAQAAACCACAAAACAACA=</HashCode>
+      <FileName>BankSystem.Core\Models\User.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OOP_LR1.BankSystem.Infrastructure.Logging.Logger" BaseTypeListCollapsed="true">
+    <Position X="15.5" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAAAAAAAAAAAAAAAAAAAAAAAAgAACAAgAAAAUgAAAA=</HashCode>
+      <FileName>BankSystem.Infrastructure\Logging\Logger.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="OOP_LR1.BankSystem.Infrastructure.Repositories.AccountRepository" BaseTypeListCollapsed="true">
+    <Position X="0.5" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAACAAAAAAE=</HashCode>
+      <FileName>BankSystem.Infrastructure\Repositories\AccountRepository.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="OOP_LR1.BankSystem.Infrastructure.Repositories.EnterpriseRepository" BaseTypeListCollapsed="true">
+    <Position X="2.25" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAABAEAAAAAAAAAAiAAAAAAAAAABAQAAAA=</HashCode>
+      <FileName>BankSystem.Infrastructure\Repositories\EnterpriseRepository.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="OOP_LR1.BankSystem.Infrastructure.Repositories.LoanRepository" BaseTypeListCollapsed="true">
+    <Position X="4" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAgAAAAACABAAABAAAAAAAQAAAABAAAAAAAAAAAAA=</HashCode>
+      <FileName>BankSystem.Infrastructure\Repositories\LoanRepository.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="OOP_LR1.BankSystem.Infrastructure.Repositories.SalaryProjectRepository" BaseTypeListCollapsed="true">
+    <Position X="5.75" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAIAAAAIAAAAAAAAAAAAAAAAAAAAAAAEAEAQ=</HashCode>
+      <FileName>BankSystem.Infrastructure\Repositories\SalaryProjectRepository.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="OOP_LR1.BankSystem.Infrastructure.Repositories.UserRepository" BaseTypeListCollapsed="true">
+    <Position X="7.5" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAgAAAAAAAABQAAAAAAAAAAAAABAAAACAAAAAQAAAA=</HashCode>
+      <FileName>BankSystem.Infrastructure\Repositories\UserRepository.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="OOP_LR1.BankSystem.Infrastructure.BankDbContext">
+    <Position X="17.75" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AACAACAAAQAAAAAAAAAAAAAAEIACAAiAAAAAEAAAAAA=</HashCode>
+      <FileName>BankSystem.Infrastructure\BankDbContext.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OOP_LR1.BankSystem.ToConsole.Services.AuthManager">
+    <Position X="21.75" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAAAAAAAIAAAAAAAEAEAAIgIAAAAAAAAAAEAAAAECA=</HashCode>
+      <FileName>BankSystem.ToConsole\Services\AuthManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OOP_LR1.BankSystem.ToConsole.Services.MenuManager">
+    <Position X="23.5" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIBQBAAAIABAAAAQAYAAAAAEJAAAAAQACCAAAAAIIAA=</HashCode>
+      <FileName>BankSystem.ToConsole\Services\MenuManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OOP_LR1.BankSystem.ToConsole.Services.UserManager">
+    <Position X="20" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAEAAAAAAA=</HashCode>
+      <FileName>BankSystem.ToConsole\Services\UserManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OOP_LR1.BankSystem.ToConsole.Style.TableDrawer">
+    <Position X="21.5" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAIAAAAAAAAAQAAAAAAAAAAAAAAAAEAAAAAAAAA=</HashCode>
+      <FileName>BankSystem.ToConsole\Style\TableDrawer.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OOP_LR1.BankSystem.ToConsole.Program">
+    <Position X="23.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAA=</HashCode>
+      <FileName>BankSystem.ToConsole\Program.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OOP_LR1.BankSystem.ToConsole.UserValidator">
+    <Position X="23.25" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAAEAAAAAAAAAAAAAEAAIQAEAAAAAAAAAAAAAAAAIAA=</HashCode>
+      <FileName>BankSystem.ToConsole\UserValidator.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Interface Name="OOP_LR1.BankSystem.Core.Interfaces.IAccountRepository">
+    <Position X="15.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAACAAAAAAE=</HashCode>
+      <FileName>BankSystem.Core\Interfaces\IAccountRepository.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="OOP_LR1.BankSystem.Core.Interfaces.IAccountService">
+    <Position X="17.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAABAAAAAAAAAIAAAAAABAAEEAAIAAAAAAAAAEAAAAI=</HashCode>
+      <FileName>BankSystem.Core\Interfaces\IAccountService.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="OOP_LR1.BankSystem.Core.Interfaces.IEnterpriseRepository">
+    <Position X="19" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAEAAAAAAAAAAiAAAAAAAAAABAQAAAA=</HashCode>
+      <FileName>BankSystem.Core\Interfaces\IEnterpriseRepository.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="OOP_LR1.BankSystem.Core.Interfaces.ILoanRepository">
+    <Position X="20.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAgAAAAACAAAAAAAAAAAAAQAAAABAAAAAAAAAAAAA=</HashCode>
+      <FileName>BankSystem.Core\Interfaces\ILoanRepository.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="OOP_LR1.BankSystem.Core.Interfaces.ISalaryProjectRepository">
+    <Position X="19" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAIAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAEAQ=</HashCode>
+      <FileName>BankSystem.Core\Interfaces\ISalaryProjectRepository.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="OOP_LR1.BankSystem.Core.Interfaces.IUserRepository">
+    <Position X="15.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAgAAAAAAAAAQAAAAAAAAAAAAABAAAACAAAAAQAAAA=</HashCode>
+      <FileName>BankSystem.Core\Interfaces\IUserRepository.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="OOP_LR1.BankSystem.Infrastructure.Logging.ILogger">
+    <Position X="17.25" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAQAAAAA=</HashCode>
+      <FileName>BankSystem.Infrastructure\Logging\ILogger.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Enum Name="OOP_LR1.BankSystem.Core.Models.Role">
+    <Position X="12.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAEABAAgAAAAAAAAIAQ=</HashCode>
+      <FileName>BankSystem.Core\Models\Role.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="OOP_LR1.BankSystem.Infrastructure.Logging.LogLevel">
+    <Position X="15.5" Y="8.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAQAAAAAAABAAAAAAAAAAAAAAAEAAAAA=</HashCode>
+      <FileName>BankSystem.Infrastructure\Logging\Logger.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
