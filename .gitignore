@@ -28,3 +28,5 @@ logs.txt
 docs/
 *.pdf
 *.docx
+
+Migrations/
